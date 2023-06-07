@@ -1,0 +1,84 @@
+.navbar {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 3px 1px rgba(128, 128, 128, 0.582);
+}
+
+.logo {
+    width: 110px;
+    height: 55px;
+}
+
+.menu {
+    display: flex;
+    flex: .5;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.menu-link {
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: black;
+}
+
+.menu-link:hover a {
+    color: #fff;
+}
+.menu-link a {
+    color: black;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.submenu {
+    width: 100px;
+    position: absolute;
+    top: 100%;
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.submenu:hover li {
+    color: black
+}
+
+
+.submenu li {
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    text-align: center;
+}
+
+.submenu li:hover {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fff;
+    color: black;
+}
+
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+}
+
+ul li:hover ul {
+    height: auto;
+}
+
+.submenu-link:hover a {
+    color: black;
+}

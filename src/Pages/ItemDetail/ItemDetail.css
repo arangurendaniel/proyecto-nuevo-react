@@ -1,0 +1,89 @@
+.item-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 15px 15px 100px 15px;
+}
+
+.item-detail-img-container {
+    box-shadow: 1px 1px 10px 3px rgba(128, 128, 128, 0.486);
+    overflow: hidden;
+}
+
+.item-detail-img {
+    transition: all 0.3s ease;
+}
+
+
+.item-detail-img:hover {
+    transform: scale(1.3);
+}
+
+.item-detail-info-container {
+    padding: 15px 15px 15px 30px;
+}
+
+.item-detail-info-container p {
+    font-size: 1.5rem;
+}
+
+
+.item-codigo {
+    padding: 40px 0;
+}
+
+.item-codigo span {
+    font-weight: bold;
+}
+
+.item-nombre {
+    font-size: 2.5rem;
+}
+
+.item-precio {
+    padding: 40px 0;
+}
+
+.item-descripcion {
+    text-align: justify;
+}
+
+.item-count {
+    display: flex;
+    max-width: 200px;
+    margin: 25px auto;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.boton-sumar {
+    border: 0;
+    background-color: black;
+    color: white;
+    border-radius: 15%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.boton-agregar {
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease ;
+    cursor: pointer;
+}
+
+.boton-agregar:hover {
+    background-color: white;
+    color: black;
+}
+

@@ -1,0 +1,38 @@
+.cart-widget-container {
+    position: relative;
+}
+
+.icon-bag {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.contador {
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    background-color: black;
+    color: #fff;
+    padding: 3px;
+    border-radius: 100%;
+    font-size: .75rem;
+}
+
+.mini-carrito-show {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    border: 1px solid black;
+    z-index: 5;
+    display: block;
+    left: -1000%;
+}
+
+.hide {
+    display: none;
+}
+
+.ir-al-carrito {
+    color: black;
+}

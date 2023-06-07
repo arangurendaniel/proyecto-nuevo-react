@@ -1,0 +1,62 @@
+.fondo-funkos {
+    opacity: 0.3;
+    z-index: -1;
+    position: absolute;
+}
+
+.formulario-contacto {
+    display: block;
+    margin:  30px auto 15px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+.formulario-contacto p {
+    padding: 10px 0;
+}
+
+.formulario-contacto label, .formulario-contacto input {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.formulario-contacto input {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.formulario-contacto label {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario-contacto textarea {
+    width: 100%;
+    border: 0;
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 1.2rem;
+}
+
+.boton-enviar {
+    display: block;
+    width: 60%;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: white;
+    margin: 10px auto;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: white;
+    color: black;
+}

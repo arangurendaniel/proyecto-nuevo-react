@@ -1,0 +1,25 @@
+.pokemon-container {
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    margin: 15px auto 0 auto;
+    display: flex;
+    box-shadow: 2px 1px 3px 3px gray;
+}
+
+.pokemon-img {
+    width: 120px;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.pokemon-info p {
+    padding: 5px 0;
+}

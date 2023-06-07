@@ -1,0 +1,128 @@
+.contenedor-carrito {
+    padding: 15px;
+}
+
+.contenedor-productos {
+    box-shadow: 2px 1px 3px 3px gray;
+    padding: 15px 0;
+}
+
+.carrito-titulo {
+margin: 15px;
+}
+
+.texto-inicial-carrito {
+    margin: 15px;
+}
+
+.contenedor-producto {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.mini-picture {
+    width: 100px;
+    height: 100px;
+}
+
+.producto-info {
+    flex: .7;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+.eliminar-producto {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.eliminar-producto:hover {
+    color: red;
+}
+
+.total-pagar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-pagar p {
+    font-size: 2rem;
+}
+
+.vaciar-carrito {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease ;
+    cursor: pointer;
+}
+
+.vaciar-carrito:hover {
+    background-color: white;
+    color: black;
+}
+
+.formulario-pagos {
+    width: 80vw;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.formulario-pagos section {
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.formulario-pagos section:first-of-type {
+    border-bottom: 2px solid gray;
+}
+
+.formulario-pagos h2 {
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    margin: 5px 0;
+}
+
+section input {
+    width: 80%;
+    padding: 3px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+
+}
+
+.boton-pagar {
+    display: block;
+    margin: auto;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease ;
+    cursor: pointer;
+}
+
