@@ -126,3 +126,12 @@ section input {
     cursor: pointer;
 }
 
+.disabled {
+    opacity: 0.5;
+}
+
+.error-message {
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 0);
+    font-weight: bold;
+}

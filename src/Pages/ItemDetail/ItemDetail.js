@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../Context/CartContext';
 import { db } from '../../firebase.config';
-import { collection, getDocs } from 'firebase/firestore';
+import { getDoc, doc } from 'firebase/firestore';
 import './ItemDetail.css';
+
 
 const ItemDetail = () => {
 
@@ -11,61 +12,15 @@ const ItemDetail = () => {
   console.log(id)
 
   const [articulo, setArticulo] = useState()
-  const [productos, setProductos] = useState([])
 
-  useEffect(() => {
-    const getProductos = async (id) => {
-        try {
+  const objeto = doc(db, 'productos', id)
 
-        const col = collection(db, "productos")
-        const data = await getDocs(col)
-        const result = data.docs.map(doc => doc={...doc.data()})
-        setProductos(result)
-        console.log("lo que hay en productos:");
-        console.log(productos);
-        const item = result.find((prod) => prod.id === id)
-        setArticulo(item)
-        console.log("El articulo es " + articulo)
-
-        } catch (error) {
-        console.log(error)
-        
-        }
-    }
-
-    getProductos(id);
-
-  }, [id])
-
-
-/*
-  function buscarItemConId(id) {
-    return new Promise ((resolve, reject) => {
-  
-      const item = data.find((prod) => prod.id === id)
-  
-      if (item) {
-        resolve(item) 
-      }
-      else {
-        reject ({
-          error: "No se encontró el item"
-        })
-      }
-  
+  getDoc(objeto)
+    .then((doc) => {
+      setArticulo(doc.data());
+      console.log(articulo)
     })
-  };
-*/
 
-  
-/*
-  useEffect(() => {
-    buscarItemConId(id)
-      .then((resp) => {
-        setArticulo(resp)
-      })
-  }, [id])
-*/
   const [cantidad, setCantidad] = useState(1);
 
   const handleSumar = () => {
