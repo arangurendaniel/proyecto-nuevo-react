@@ -7,11 +7,11 @@ import { CartContext } from '../../Context/CartContext';
 
 const CartWidget = () => {
 
-  const {contador} = useContext(CartContext);
+  const {contador, toggleNavbar} = useContext(CartContext);
 
   return (
       <div className='cart-widget-container' >
-        <Link className='ir-al-carrito' to={"/carrito"}>
+        <Link onClick={toggleNavbar} className='ir-al-carrito' to={"/carrito"}>
           <i className="icon-bag bi bi-bag-fill"></i>
         </Link>
           <div className='contador'>

@@ -1,9 +1,9 @@
-.navbar {
-    width: 100%;
-    padding: 15px;
+header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
     box-shadow: 1px 1px 3px 1px rgba(128, 128, 128, 0.582);
 }
 
@@ -12,9 +12,16 @@
     height: 55px;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.8;
+}
+
 .menu {
     display: flex;
-    flex: .5;
+    flex: .8;
     justify-content: space-around;
     align-items: center;
     position: relative;
@@ -42,7 +49,7 @@
 .submenu {
     width: 100px;
     position: absolute;
-    top: 100%;
+    top: 90%;
     background-color: black;
     color: #fff;
     width: 100px;
@@ -81,4 +88,66 @@ ul li:hover ul {
 
 .submenu-link:hover a {
     color: black;
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+    display: none;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    header .nav-btn {
+        display: inline;
+    }
+
+    .navbar {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        color: #000;
+        transition: 1s;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .responsive_nav {
+        transform: translateY(100vh)
+    }
+
+    .navbar .nav-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .menu-two {
+        position: relative;
+        width: 100%;
+    }
+
+    .submenu {
+        position: absolute;
+        top: 0;
+        left: 5rem;
+    }
+
 }

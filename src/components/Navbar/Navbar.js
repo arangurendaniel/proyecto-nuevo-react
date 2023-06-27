@@ -1,32 +1,51 @@
 import './Navbar.css';
-import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom';
+import React, { useContext} from 'react'
+import { Link } from 'react-router-dom'
+import CartWidget from '../CartWidget/CartWidget';
+import { CartContext } from '../../Context/CartContext';
 
 const Navbar = () => {
-  return (
-    <div className='navbar'>
-      <Link to="/"><img className='logo' src={require("../../imagenes/logo-nuevo-dos.png")} alt="Logo de Meme's House" /></Link>
-      <ul className="menu">
-        <li className='menu-link'>
-          <Link to="/">Inicio</Link>
-        </li>
-        <li className='menu-link menu-two'>
-          <Link to="/tienda">Tienda</Link>
-          <ul className='submenu'>
-            <li className='submenu-link'><Link to={"/tienda/Tazas"}>Tazas</Link></li>
-            <li className='submenu-link'><Link to={"/tienda/Funkos"} >Funkos</Link></li>
-            <li className='submenu-link'><Link to={"/tienda/Vasos"}>Vasos</Link></li>
-          </ul>
-        </li>
-        <li className='menu-link'>
-          <Link to="/nosotros">Nosotros</Link>
-        </li>
-        <li className='menu-link'>
-          <Link to="/contacto">Contacto</Link>
-        </li>
-      </ul>
-      <CartWidget />
-    </div>
+
+    const {navMenu, toggleNavbar} = useContext(CartContext);
+
+    let toggleClass = navMenu ? 'responsive_nav' : '';
+
+    return (
+    <header>
+        <Link to={"/"}>
+            <img className='logo' src={require("../../imagenes/logo-nuevo-dos.png")} alt="Logo" />
+        </Link>
+        <div className={`navbar ${toggleClass}`}>
+            <ul className="menu">
+                <li onClick={toggleNavbar} className='menu-link'>
+                <Link to="/">Inicio</Link>
+                </li>
+                <li onClick={toggleNavbar} className='menu-link menu-two'>
+                <Link to="/tienda">Tienda</Link>
+                <ul className='submenu'>
+                    <li onClick={toggleNavbar} className='submenu-link'><Link to={"/tienda/Tazas"}>Tazas</Link></li>
+                    <li onClick={toggleNavbar} className='submenu-link'><Link to={"/tienda/Funkos"} >Funkos</Link></li>
+                    <li onClick={toggleNavbar} className='submenu-link'><Link to={"/tienda/Vasos"}>Vasos</Link></li>
+                </ul>
+                </li>
+                <li onClick={toggleNavbar} className='menu-link'>
+                <Link to="/nosotros">Nosotros</Link>
+                </li>
+                <li onClick={toggleNavbar} className='menu-link'>
+                <Link to="/contacto">Contacto</Link>
+                </li>
+                <CartWidget />
+            </ul>
+            <button 
+            className='nav-btn nav-close-btn' 
+            onClick={toggleNavbar}>
+                <i className='bi bi-x-lg'></i>
+            </button>
+        </div>
+        <button className='nav-btn' onClick={toggleNavbar}>
+            <i className='bi bi-list'></i>
+        </button>
+    </header>
   )
 }
 

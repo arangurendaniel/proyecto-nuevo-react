@@ -65,7 +65,7 @@ const ShoppingCart = () => {
       <div className={carrito.length > 0 ? 'contenedor-productos' : "undefined"}>
         {carrito.length > 0 && carrito.map((prod) => {
           return <div key={prod.id} className='contenedor-producto'>
-            <img className='mini-picture' src={prod.imagen} alt={prod.nombre} />
+            <img className='show mini-picture' src={prod.imagen} alt={prod.nombre} />
             <div className='producto-info'>
               <span>{prod.categoria}</span>
               <span>{prod.nombre}</span>

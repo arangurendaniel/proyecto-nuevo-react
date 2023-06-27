@@ -12,13 +12,7 @@ const ItemListContainer = () => {
     console.log(productos);  
 
     const categoria = useParams().categoria
-/*
-    const traerDatos = () => {
-        return new Promise((resolve, reject) => {
-          resolve(data)
-        })
-      };
-*/
+
     useEffect(() => {
         const getProductos = async () => {
             try {
@@ -42,19 +36,6 @@ const ItemListContainer = () => {
 
     }, [categoria])
     
-/*
-    useEffect(() => {
-        traerDatos()
-            .then((resp) => {
-                if (categoria) {
-                    setProductos(resp.filter(prod => prod.categoria === categoria))
-                } else {
-                    setProductos(resp)
-                }
-            })
-    }, [categoria])
-*/
-
     return (
     <>
         <div className='item-list-container'>

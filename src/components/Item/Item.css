@@ -1,6 +1,7 @@
 .item-card {
     width: 300px;
     height: 450px;
+    margin: auto;
 }
 
 .item-card:hover {
@@ -52,4 +53,12 @@
 .ver-mas:hover {
     background-color: white;
     color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .item-card {
+        width: 450px;
+        height: 600px;
+
+    }
 }

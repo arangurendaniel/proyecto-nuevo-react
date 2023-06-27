@@ -24,7 +24,7 @@ const ItemDetail = () => {
   const [cantidad, setCantidad] = useState(1);
 
   const handleSumar = () => {
-    setCantidad(cantidad + 1)
+    cantidad < articulo.stock && setCantidad(cantidad + 1);
   }
 
   const handleRestar = () => {

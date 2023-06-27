@@ -1,5 +1,5 @@
 .pagina-nosotros {
-    padding-bottom: 60px;
+    padding-bottom: 6rem;
 }
 
 .titulo-nosotros {
@@ -9,5 +9,6 @@
 }
 
 .texto {
-    padding: 10px 0;
+    padding: 10px;
+    text-align: justify;
 }

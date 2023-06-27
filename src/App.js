@@ -11,7 +11,14 @@ import { useState } from 'react';
 import { CartContext } from './Context/CartContext';
 import ShoppingCart from './Pages/ShoppingCart/ShoppingCart';
 
+
 function App() {
+
+  const [navMenu, setNav] = useState(false)
+
+  const toggleNavbar = () => {
+    setNav(!navMenu)
+};
 
   const [carrito, setCarrito] = useState([]);
 
@@ -32,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <CartContext.Provider value={ {carrito, setCarrito, contadorDeProductos, contador, vaciarCarrito, precioTotal}}>
+      <CartContext.Provider value={ {carrito, setCarrito, contadorDeProductos, contador, vaciarCarrito, precioTotal, navMenu, toggleNavbar}}>
         <BrowserRouter> 
         <Navbar />
           <Routes>
@@ -48,7 +55,8 @@ function App() {
         </BrowserRouter>
       </CartContext.Provider>
     </div>
-  );
+    
+  )
 }
 
 export default App;
